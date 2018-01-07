@@ -474,6 +474,9 @@
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="check:" destination="LiE-J5-foF" eventType="editingChanged" id="Nrc-bv-sCv"/>
+                                        </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="key-FI-C21">
                                         <rect key="frame" x="0.0" y="58" width="374" height="46"/>
@@ -502,7 +505,7 @@
                         <viewLayoutGuide key="safeArea" id="49V-9d-tr9"/>
                     </view>
                     <navigationItem key="navigationItem" id="qOD-lC-61U">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LkC-Ua-3Ap">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="LkC-Ua-3Ap">
                             <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="AQ0-hK-BFX" kind="unwind" identifier="addSong" unwindAction="unwindFromAddSong:" id="aWV-1Q-L6B"/>
@@ -512,6 +515,7 @@
                     <connections>
                         <outlet property="nametxt" destination="beu-UZ-tEo" id="o7B-eW-gPt"/>
                         <outlet property="pick" destination="key-FI-C21" id="DyR-Ch-3Hx"/>
+                        <outlet property="saveBtn" destination="LkC-Ua-3Ap" id="4ZT-3M-TOe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9UG-0d-Isa" userLabel="First Responder" sceneMemberID="firstResponder"/>

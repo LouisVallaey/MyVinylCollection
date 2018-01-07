@@ -11,6 +11,7 @@ import UIKit
 class AddSongViewController: UIViewController {
     @IBOutlet weak var nametxt: UITextField!
     @IBOutlet weak var pick: UISegmentedControl!
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     var song : Song?
     var side : String = "A-Side"
     override func viewDidLoad() {
@@ -31,4 +32,12 @@ class AddSongViewController: UIViewController {
             break
         }
     }
+    @IBAction func check(_ sender: Any) {
+        if nametxt.text == "" {
+            saveBtn.isEnabled = false
+        } else {
+            saveBtn.isEnabled = true
+        }
+    }
+    
 }
