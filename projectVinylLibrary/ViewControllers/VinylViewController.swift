@@ -17,12 +17,12 @@ class VinylViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
     // custom layout, 3 items naast elkaar zonder margin.
         let itemSize = UIScreen.main.bounds.width/3
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        layout.itemSize = CGSize(width: itemSize, height: itemSize)
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        collectionView.collectionViewLayout = layout
+        let ly = UICollectionViewFlowLayout()
+        ly.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        ly.itemSize = CGSize(width: itemSize, height: itemSize)
+        ly.minimumInteritemSpacing = 0
+        ly.minimumLineSpacing = 0
+        collectionView.collectionViewLayout = ly
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,7 +33,9 @@ class VinylViewController: UIViewController, UICollectionViewDelegate, UICollect
             let showVinylDetailCtrl = segue.destination as! ShowVinylDetailViewController
             let selectVinyl = collectionView.indexPathsForSelectedItems?.first
             showVinylDetailCtrl.vinyl = categorie.vinyl[(selectVinyl?.item)!]
-            
+        case "showVinylDetailR"?:
+            let showVinylDetailCtrl = segue.destination as! ShowVinylDetailViewController
+            showVinylDetailCtrl.vinyl = categorie.vinyl[Int(arc4random_uniform(UInt32(categorie.vinyl.count)))]
         default:
             fatalError("Unknown segue")
         }
@@ -86,5 +88,11 @@ class VinylViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
         cell.sendSubview(toBack: cell.imagecell)
         return cell
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake{
+            performSegue(withIdentifier: "showVinylDetailR", sender: nil)
+        }
     }
 }
