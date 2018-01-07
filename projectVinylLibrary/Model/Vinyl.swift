@@ -16,6 +16,7 @@ class Vinyl: Object {
     @objc dynamic var released = Date()
     @objc dynamic var style = ""
     @objc dynamic var imageAd = ""
+    let song = List<Song>()
     
     convenience init(title: String , artist: String, type: String, imageAd: String) {
         self.init()

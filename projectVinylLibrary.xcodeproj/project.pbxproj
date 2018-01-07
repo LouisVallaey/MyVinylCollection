@@ -10,6 +10,9 @@
 		DA86102E1FFB9A25005E27E5 /* AddCategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86102D1FFB9A25005E27E5 /* AddCategorieViewController.swift */; };
 		DA8610301FFBEEE3005E27E5 /* VinylViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86102F1FFBEEE3005E27E5 /* VinylViewController.swift */; };
 		DA8610321FFBF09D005E27E5 /* VinylCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8610311FFBF09D005E27E5 /* VinylCell.swift */; };
+		DA9F228920026E8F004B5DFA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F228820026E8F004B5DFA /* Song.swift */; };
+		DA9F228B20026F9C004B5DFA /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F228A20026F9C004B5DFA /* SongTableViewCell.swift */; };
+		DA9F228D2002758F004B5DFA /* AddSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F228C2002758F004B5DFA /* AddSongViewController.swift */; };
 		DADD3F581FF8E1E90091E318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD3F571FF8E1E90091E318 /* AppDelegate.swift */; };
 		DADD3F5A1FF8E1E90091E318 /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD3F591FF8E1E90091E318 /* CategorieViewController.swift */; };
 		DADD3F5D1FF8E1E90091E318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADD3F5B1FF8E1E90091E318 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		DA86102D1FFB9A25005E27E5 /* AddCategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategorieViewController.swift; sourceTree = "<group>"; };
 		DA86102F1FFBEEE3005E27E5 /* VinylViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylViewController.swift; sourceTree = "<group>"; };
 		DA8610311FFBF09D005E27E5 /* VinylCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylCell.swift; sourceTree = "<group>"; };
+		DA9F228820026E8F004B5DFA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		DA9F228A20026F9C004B5DFA /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		DA9F228C2002758F004B5DFA /* AddSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSongViewController.swift; sourceTree = "<group>"; };
 		DADD3F541FF8E1E90091E318 /* projectVinylLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectVinylLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADD3F571FF8E1E90091E318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DADD3F591FF8E1E90091E318 /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 			children = (
 				DADD3F781FF8E6170091E318 /* Categorie.swift */,
 				DADD3F7A1FF8E62F0091E318 /* Vinyl.swift */,
+				DA9F228820026E8F004B5DFA /* Song.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 			children = (
 				DADD3F801FFB93D50091E318 /* CategorieCell.swift */,
 				DA8610311FFBF09D005E27E5 /* VinylCell.swift */,
+				DA9F228A20026F9C004B5DFA /* SongTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,8 +149,9 @@
 				DA86102D1FFB9A25005E27E5 /* AddCategorieViewController.swift */,
 				DA86102F1FFBEEE3005E27E5 /* VinylViewController.swift */,
 				DAE18C251FFD03A400EE7CC1 /* AddVinylViewController.swift */,
-				DAE18C271FFD45D300EE7CC1 /* ShowVinylDetailViewController.swift */,
 				DAE18C2B2001533200EE7CC1 /* EditVinylViewController.swift */,
+				DAE18C271FFD45D300EE7CC1 /* ShowVinylDetailViewController.swift */,
+				DA9F228C2002758F004B5DFA /* AddSongViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 				DA86102E1FFB9A25005E27E5 /* AddCategorieViewController.swift in Sources */,
 				DAE18C261FFD03A400EE7CC1 /* AddVinylViewController.swift in Sources */,
 				DA8610301FFBEEE3005E27E5 /* VinylViewController.swift in Sources */,
+				DA9F228B20026F9C004B5DFA /* SongTableViewCell.swift in Sources */,
 				DAE18C2C2001533200EE7CC1 /* EditVinylViewController.swift in Sources */,
 				DAE18C281FFD45D300EE7CC1 /* ShowVinylDetailViewController.swift in Sources */,
 				DADD3F7B1FF8E62F0091E318 /* Vinyl.swift in Sources */,
@@ -248,7 +258,9 @@
 				DA8610321FFBF09D005E27E5 /* VinylCell.swift in Sources */,
 				DADD3F791FF8E6170091E318 /* Categorie.swift in Sources */,
 				DADD3F5A1FF8E1E90091E318 /* CategorieViewController.swift in Sources */,
+				DA9F228920026E8F004B5DFA /* Song.swift in Sources */,
 				DADD3F581FF8E1E90091E318 /* AppDelegate.swift in Sources */,
+				DA9F228D2002758F004B5DFA /* AddSongViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
